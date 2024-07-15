@@ -1,0 +1,8 @@
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_1.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_2.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_3.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_4.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_5.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/task_6.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/trygjor/CPP_4_programmers/assignment_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

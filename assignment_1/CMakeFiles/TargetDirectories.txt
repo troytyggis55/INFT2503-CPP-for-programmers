@@ -1,0 +1,3 @@
+/home/trygjor/CPP_4_programmers/assignment_1/CMakeFiles/assignment_1.dir
+/home/trygjor/CPP_4_programmers/assignment_1/CMakeFiles/edit_cache.dir
+/home/trygjor/CPP_4_programmers/assignment_1/CMakeFiles/rebuild_cache.dir

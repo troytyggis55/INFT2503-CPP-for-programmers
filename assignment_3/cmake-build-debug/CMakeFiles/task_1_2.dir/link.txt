@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/task_1_2.dir/task_1_2.cpp.o CMakeFiles/task_1_2.dir/Circle.cpp.o -o task_1_2 
