@@ -1,5 +1,0 @@
-/home/trygjor/CPP_4_programmers/assignment_3/cmake-build-debug/CMakeFiles/task_1_2.dir
-/home/trygjor/CPP_4_programmers/assignment_3/cmake-build-debug/CMakeFiles/task_3.dir
-/home/trygjor/CPP_4_programmers/assignment_3/cmake-build-debug/CMakeFiles/task_4.dir
-/home/trygjor/CPP_4_programmers/assignment_3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/trygjor/CPP_4_programmers/assignment_3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
