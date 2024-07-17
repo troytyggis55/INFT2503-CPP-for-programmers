@@ -28,6 +28,8 @@ public:
 
         /// Returns true if the given chess piece move is valid
         virtual bool valid_move(int from_x, int from_y, int to_x, int to_y) const = 0;
+
+        virtual string print_piece() const = 0;
     };
 
     class King : public Piece {
@@ -49,6 +51,14 @@ public:
 
             return move_sum > 0 && move_x < 2 && move_y < 2;
         }
+
+        string print_piece() const override {
+            if (this->color == Color::WHITE) {
+                return "\033[1;37m K ";
+            } else {
+                return "\033[1;30m K ";
+            }
+        }
     };
 
     class Knight : public Piece {
@@ -69,6 +79,14 @@ public:
             int move_sum = move_x + move_y;
 
             return move_sum == 3 && move_x < 3 && move_y < 3;
+        }
+
+        string print_piece() const override {
+            if (this->color == Color::WHITE) {
+                return "\033[1;37m h ";
+            } else {
+                return "\033[1;30m h ";
+            }
         }
     };
 
@@ -117,6 +135,42 @@ public:
             return false;
         }
     }
+
+
+    void print_board() {
+        // ANSI escape codes for colors
+        const string black_square("\033[0;40m");
+        const string white_square("\033[1;47m");
+
+        const string empty("   ");
+
+        const string line(3 * 8 , '-');
+        const string reset("\033[0;40m");
+
+        cout << "+" << line << "+" << endl;
+
+        string square;
+        string piece = empty;
+
+        for (int y = 7; y >= 0; --y) {
+            cout << "|";
+            for (int x = 0; x < 8; ++x) {
+                square = ((x + y) % 2 != 0) ? white_square : black_square;
+
+                if (auto &current_piece = squares[x][y]) {
+                    piece = current_piece->print_piece();
+                } else {
+                    piece = empty;
+                }
+
+                cout << square << piece;
+
+                //cout << x << " " << y << "\t";
+            }
+            cout << reset << "|" << endl;
+        }
+        cout << "+" << line << "+" << endl;
+    }
 };
 
 int main() {
@@ -137,13 +191,24 @@ int main() {
     cout << endl;
 
     cout << "A simulated game:" << endl;
+
+    board.print_board();
     board.move_piece("e1", "e2");
+    board.print_board();
     board.move_piece("g8", "h6");
+    board.print_board();
     board.move_piece("b1", "c3");
+    board.print_board();
     board.move_piece("h6", "g8");
+    board.print_board();
     board.move_piece("c3", "d5");
+    board.print_board();
     board.move_piece("g8", "h6");
+    board.print_board();
     board.move_piece("d5", "f6");
+    board.print_board();
     board.move_piece("h6", "g8");
+    board.print_board();
     board.move_piece("f6", "e8");
+    board.print_board();
 }
