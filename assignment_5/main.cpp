@@ -124,7 +124,7 @@ public:
                         return false;
                     }
                 }
-                piece_to = move(piece_from);
+                piece_to = std::move(piece_from);
                 return true;
             } else {
                 cout << "can not move " << piece_from->type() << " from " << from << " to " << to << endl;
@@ -150,7 +150,7 @@ public:
         cout << "+" << line << "+" << endl;
 
         string square;
-        string piece = empty;
+        string piece;
 
         for (int y = 7; y >= 0; --y) {
             cout << "|";
