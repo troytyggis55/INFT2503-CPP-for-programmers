@@ -18,4 +18,17 @@ int main() {
     auto result_3 = equal(v1.begin(), v1.begin() + 4, v2.begin(), about_equal);
     cout << "First 5 elements are about equal: " << result_2 << endl;
     cout << "First 4 elements are about equal: " << result_3 << endl;
+
+    cout << "Before: ";
+    for (int i : v1)
+        cout << i << " ";
+    cout << endl;
+
+    auto is_odd = [](int i) { return i % 2 != 0; };
+    replace_copy_if(v1.begin(), v1.end(), v1.begin(), is_odd, 100);
+
+    cout << "Odd numbers replaced with 100: ";
+    for (int i : v1)
+        cout << i << " ";
+    cout << endl;
 }
