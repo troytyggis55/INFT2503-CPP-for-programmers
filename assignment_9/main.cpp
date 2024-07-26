@@ -9,8 +9,13 @@ int main() {
     vector<int> v2 = {2, 3, 12, 14, 24};
 
     auto is_larger_than_15 = [](int i) { return i > 15; };
+    auto result_1 = find_if(v1.begin(), v1.end(), is_larger_than_15);
+    cout << "First element larger than 15: " << *result_1 << endl;
 
-    auto result = find_if(v1.begin(), v1.end(), is_larger_than_15);
+    auto about_equal = [](int a, int b) { return a - b < 3 && a - b > -3; };
 
-    cout << "First element larger than 15: " << *result << endl;
+    auto result_2 = equal(v1.begin(), v1.begin() + 5, v2.begin(), about_equal);
+    auto result_3 = equal(v1.begin(), v1.begin() + 4, v2.begin(), about_equal);
+    cout << "First 5 elements are about equal: " << result_2 << endl;
+    cout << "First 4 elements are about equal: " << result_3 << endl;
 }
