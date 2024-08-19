@@ -17,6 +17,10 @@ Set::Set(const vector<int> &set) {
     this->set = set;
 }
 
+Set::Set(const Set &other) {
+    set = other.set;
+}
+
 Set Set::operator+(const Set &other) const {
     Set new_set(set);
     for (size_t i = 0; i < other.set.size(); i++) {

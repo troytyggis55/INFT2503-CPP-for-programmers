@@ -13,6 +13,7 @@ class Set {
 public:
     vector<int> set;
     Set();
+    Set(const Set& other);
     Set(const vector<int> &set);
     Set operator+(const Set &other) const;
     Set &operator+(int integer);

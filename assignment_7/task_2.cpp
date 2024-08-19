@@ -5,12 +5,13 @@
 int main() {
     Set a({1, 2, 3});
     Set b({3, 4, 5});
-
     Set c = a + b;
+    Set d;
 
     a.print();
     b.print();
     c.print();
+    d.print();
 
     a = a + 10;
 
@@ -20,7 +21,7 @@ int main() {
 
     a.print();
 
-    c = a;
+    d = a;
 
-    c.print();
+    d.print();
 }
