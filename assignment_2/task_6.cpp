@@ -12,8 +12,15 @@ int find_sum(const int *table, int length) {
 }
 
 int main() {
-    const int length = 3;
-    int table[length] = {1, 2, 3};
+    int length = 20;
+    int table[length];
+    for (int i = 0; i < length; ++i) {
+        table[i] = i + 1;
+        cout << table[i] << " ";
+    }
+    cout << endl;
 
-    cout << find_sum(table, length) << endl;
+    cout << find_sum(table, 10) << endl;
+    cout << find_sum(table + 10, 5) << endl;
+    cout << find_sum(table + 15, 5) << endl;
 }

@@ -1,0 +1,1 @@
+Alle oppgavene er besvart med kommentarer direkte i koden.
