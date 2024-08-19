@@ -46,11 +46,11 @@ private:
                                      write_stream << "HTTP/1.1 200 OK\r\nContent-Type: "
                                                      "text/html\r\n\r\nDette er hovedsiden\r\n";
                                  } else if (message == "GET /en_side HTTP/1.1") {
-                                     write_stream << "HTTP/1.1 404 Not Found\r\nContent-Type: "
+                                     write_stream << "HTTP/1.1 200 OK\r\nContent-Type: "
                                                      "text/html\r\n\r\nDette er en side\r\n";
                                  } else if (message.substr(0, 5) == "GET /") {
                                      write_stream << "HTTP/1.1 404 Not Found\r\nContent-Type: "
-                                                     "text/html\r\n\r\nNot Found\r\n";
+                                                     "text/html\r\n\r\n404 Not Found\r\n";
                                  }
 
                                  // Write to client
