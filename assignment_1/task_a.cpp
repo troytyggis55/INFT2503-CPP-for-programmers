@@ -14,7 +14,7 @@ int main() {
     for (int i = 0; i < length; ++i) {
         int temp = 0;
 
-        cout << "Temperatur nr " << i + 1 << "\t";
+        cout << "Temperatur nr " << i + 1 << ":\t";
         cin >> temp;
         cin.get();
 

@@ -25,7 +25,7 @@ int main() {
         }
     }
 
-    cout << "Kalde: " << cold << "\tLunkne: " << lukewarm << "\tVarme: " << warm << "\n";
+    cout << "Kalde: " << cold << "\tLunkne: " << lukewarm << "\tVarme: " << warm << endl;
 }
 
 void read_temperature(double temperatures[], int length) {
@@ -35,7 +35,7 @@ void read_temperature(double temperatures[], int length) {
             file >> temperatures[i];
         }
     } else {
-        cout << "Kunne ikke åpne filen\n";
+        cout << "Kunne ikke åpne filen" << endl;
     }
 
     file.close();
